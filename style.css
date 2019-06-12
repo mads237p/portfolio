@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+#menu {
+    position: absolute;
+    right: 3vw;
+    margin-right: 30vw;
+    text-align: right;
+    margin: 1.5rem;
+    width: 3vw;
+    height: 1vw;
+    background-color: black;
+    opacity: 0.5;
+}
+
+#front #logo {
+    position: absolute;
+    left: 3vw;
+    margin-right: 30vw;
+    text-align: left;
+    margin: 1.5rem;
+    width: 5vw;
+    height: 5vw;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 100px;
+}
+
+.slider {
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    /*    overflow-y: hidden;*/
+}
+
+.slide {
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    background-color: orange;
+}
+
+a {
+    position: absolute;
+    z-index: 10;
+
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: black;
+    opacity: .5;
+
+}
+
+
+
+
+
+@keyframes spin_kf {
+    from {
+        transform: scale(1 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
