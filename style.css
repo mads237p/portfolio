@@ -1,3 +1,10 @@
+
+
+
+
+/***** GENERELLE INDSTILLINGER ******/
+
+
 * {
     box-sizing: border-box;
 }
@@ -11,6 +18,53 @@ img {
     width: 100%;
 }
 
+h1 {
+    font-family: 'sofia-pro', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'sofia-pro', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'gill-sans-nova', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.logo {
+    position: absolute;
+    width: 52vw;
+    height: 60vw;
+    background-size: 100%;
+    top: 0;
+    margin-top: 8rem;
+
+}
+
+.pil {
+    position: fixed;
+    right: 5vw;
+    background-size: 100%;
+     width: 5vw;
+    height: 9.5vw;
+    top: 60vw;
+}
+
+.pil2 {
+    position: fixed;
+    left: 5vw;
+    top: 60vw;
+    background-size: 100%;
+    width: 5vw;
+    height: 9.5vw;
+}
+
+
 header {
     display: flex;
     position: relative;
@@ -21,7 +75,6 @@ header {
 #menu {
     position: absolute;
     right: 3vw;
-    margin-right: 30vw;
     text-align: right;
     margin: 1.5rem;
     width: 3vw;
@@ -30,65 +83,44 @@ header {
     opacity: 0.5;
 }
 
-#front #logo {
-    position: absolute;
-    left: 3vw;
-    margin-right: 30vw;
-    text-align: left;
-    margin: 1.5rem;
-    width: 5vw;
-    height: 5vw;
-    background-color: black;
-    opacity: 0.5;
-    border-radius: 100px;
-}
 
 .slider {
     background-size: cover;
     width: 100%;
     display: flex;
+
     /*    overflow-y: hidden;*/
 }
+
+
 
 .slide {
     display: flex;
     background-size: cover;
-    align-items: center;
     justify-content: center;
     width: 100%;
     flex-shrink: 0;
     height: 100%;
-    background-color: orange;
+    background-size: cover;
 }
 
-a {
-    position: absolute;
-    z-index: 10;
-
+#slide-1 {
+    background-image: url(assets/P1033146.jpg);
+    width: 100%;
+    height: 178vw;
+    margin: 0;
+    background-position: 45% 0%;
 }
 
-button {
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-    border-radius: 20px;
-    background-color: black;
-    opacity: .5;
-
+#slide-2 {
+    top: 0;
+    background-size: cover;
+    background-image: url(assets/Group%2017.png);
+    width: 100%;
+    height: 178vw;
+    background-position: 85% 10%;
+    margin: 0;
 }
 
 
 
-
-
-@keyframes spin_kf {
-    from {
-        transform: scale(1 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1.05);
-        opacity: 1;
-    }
-}
