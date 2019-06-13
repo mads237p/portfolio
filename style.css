@@ -1,22 +1,103 @@
 
 
-
-
 /***** GENERELLE INDSTILLINGER ******/
+:root {
+  --main-bg-color: #F2F1EF;
+}
 
 
 * {
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
+    background-color: var(--main-bg-color);
 
 }
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+/**** billed indtillinger ******/
 
 img {
     width: 100%;
+
 }
+
+.billede {
+    border-radius: 100px;
+}
+
+.nav_center {
+    width: 30vw;
+    margin: 4rem 25vw 0rem 35vw;
+}
+
+.nav_left {
+    position: absolute;
+    width: 10vw;
+    margin: 3vw;
+}
+.nav_right {
+    width: 10vw;
+}
+
+
+/**** billed indtillinger slut ******/
+
+/**** HEADER ****/
+
+
+header {
+    display: inline-block;
+    margin-top: 1vw;
+}
+
+
+#menu {
+    flex-wrap: wrap;
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    padding: 35vw 35vw 0 35vw;
+    background-color: #3F3140;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.5s;
+
+}
+
+
+header #menu_knap {
+    position: fixed;
+    top: 3vw;
+    left: 83vw;
+    margin: 2vw;
+}
+
+.dots {
+    display: inline-block;
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    margin: 0.2rem;
+
+}
+
+/**** HEADER SLUT ****/
+
+/*** text ***/
 
 h1 {
     font-family: 'sofia-pro', sans-serif;
@@ -27,35 +108,45 @@ h1 {
 h2 {
     font-family: 'sofia-pro', sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 p {
     font-family: 'gill-sans-nova', sans-serif;
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
+}
+
+ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .logo {
     position: absolute;
     width: 52vw;
-    height: 60vw;
+    height: 58vw;
     background-size: 100%;
-    top: 0;
     margin-top: 8rem;
 
 }
 
-.pil {
+
+#pil_right {
     position: fixed;
-    right: 5vw;
+    left: 90vw;
     background-size: 100%;
      width: 5vw;
     height: 9.5vw;
     top: 60vw;
 }
 
-.pil2 {
+#pil_left {
     position: fixed;
     left: 5vw;
     top: 60vw;
@@ -65,23 +156,30 @@ p {
 }
 
 
-header {
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
+/*****ANIMATIONS ******/
+
+.start_ani {
+    animation-name: start_kf;
+    animation-duration: 2.5s;
+
+}
+
+@keyframes start_kf  {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 
-#menu {
-    position: absolute;
-    right: 3vw;
-    text-align: right;
-    margin: 1.5rem;
-    width: 3vw;
-    height: 1vw;
-    background-color: black;
-    opacity: 0.5;
-}
+
+/*****ANIMATIONS END ******/
+
 
 
 .slider {
@@ -115,12 +213,64 @@ header {
 #slide-2 {
     top: 0;
     background-size: cover;
-    background-image: url(assets/Group%2017.png);
+    background-image: url(assets/P1033146.jpg);
     width: 100%;
     height: 178vw;
     background-position: 85% 10%;
     margin: 0;
 }
+
+#slide-3 {
+    top: 0;
+    background-size: cover;
+    background-image: url(assets/P1033146.jpg);
+    width: 100%;
+    height: 178vw;
+    background-position: 85% 10%;
+    margin: 0;
+}
+
+#slide-4 {
+    top: 0;
+    background-size: cover;
+    background-image: url(assets/P1033146.jpg);
+    width: 100%;
+    height: 178vw;
+    background-position: 85% 10%;
+    margin: 0;
+}
+
+
+/******* UNDERSIDE INDSTILLINGER *******/
+
+
+
+#responsive .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+
+}
+
+#responsive .col_left {
+    display: inline-block;
+    flex-basis: 200px;
+    flex-grow: 1;
+    padding: 1rem 2rem;
+}
+
+#responsive .col_right {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 1rem 2rem;
+}
+
+@media only screen and (min-width:1004px) {
+
+
+}
+
 
 
 
