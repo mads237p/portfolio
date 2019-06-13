@@ -1,8 +1,6 @@
-
-
 /***** GENERELLE INDSTILLINGER ******/
 :root {
-  --main-bg-color: #F2F1EF;
+    --main-bg-color: #F2F1EF;
 }
 
 
@@ -12,92 +10,11 @@
 
 
 body {
+    top: 0;
     margin: 0;
     background-color: var(--main-bg-color);
 
 }
-
-.hidden {
-    display: none;
-    visibility: hidden;
-}
-
-/**** billed indtillinger ******/
-
-img {
-    width: 100%;
-
-}
-
-.billede {
-    border-radius: 100px;
-}
-
-.nav_center {
-    width: 30vw;
-    margin: 4rem 25vw 0rem 35vw;
-}
-
-.nav_left {
-    position: absolute;
-    width: 10vw;
-    margin: 3vw;
-}
-.nav_right {
-    width: 10vw;
-}
-
-
-/**** billed indtillinger slut ******/
-
-/**** HEADER ****/
-
-
-header {
-    display: inline-block;
-    margin-top: 1vw;
-}
-
-
-#menu {
-    flex-wrap: wrap;
-    display: inline-block;
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: 0;
-    width: 100%;
-    padding: 35vw 35vw 0 35vw;
-    background-color: #3F3140;
-    font-size: 1.2rem;
-    text-align: center;
-    justify-content: center;
-    z-index: 10;
-    transition: 0.5s;
-
-}
-
-
-header #menu_knap {
-    position: fixed;
-    top: 3vw;
-    left: 83vw;
-    margin: 2vw;
-}
-
-.dots {
-    display: inline-block;
-    background-color: black;
-    width: 5px;
-    height: 5px;
-    margin: 0.2rem;
-
-}
-
-/**** HEADER SLUT ****/
-
-/*** text ***/
 
 h1 {
     font-family: 'sofia-pro', sans-serif;
@@ -127,6 +44,82 @@ ul {
     margin: 0;
 }
 
+
+/**** billed indstillinger ******/
+
+img {
+    width: 100%;
+
+}
+
+.billede {
+    border-radius: 100px;
+}
+
+
+/**** HEADER ****/
+
+
+header {
+    display: inline-block;
+    margin-top: 1vw;
+}
+
+nav {
+    display: inline-block;
+    margin: 2vw;
+}
+
+.nav_left {
+    flex-grow: 1;
+    width: 10vw;
+}
+
+
+/*
+.nav_right {
+    width: 10vw;
+}
+*/
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+
+#menu {
+    flex-wrap: wrap;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    width: 30%;
+    padding: 15vw 35vw 0 15vw;
+    background-color: #F2F1EF;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.5s;
+    opacity: 0.95;
+
+}
+
+
+header .menuknap {
+    position: fixed;
+    top: 3vw;
+    left: 83vw;
+    margin: 4vw;
+    width: 8vw;
+    z-index: 20;
+}
+
+
+
 .logo {
     position: absolute;
     width: 52vw;
@@ -141,7 +134,7 @@ ul {
     position: fixed;
     left: 90vw;
     background-size: 100%;
-     width: 5vw;
+    width: 5vw;
     height: 9.5vw;
     top: 60vw;
 }
@@ -164,7 +157,7 @@ ul {
 
 }
 
-@keyframes start_kf  {
+@keyframes start_kf {
     0% {
         transform: scale(0.8);
         opacity: 0;
@@ -179,6 +172,8 @@ ul {
 
 
 /*****ANIMATIONS END ******/
+
+/********************* FORSIDE **********************/
 
 
 
@@ -244,6 +239,12 @@ ul {
 /******* UNDERSIDE INDSTILLINGER *******/
 
 
+#responsive .splash_logo {
+    display: block;
+    text-align: center;
+
+
+}
 
 #responsive .wrapper {
     display: flex;
@@ -252,6 +253,7 @@ ul {
     margin: 2rem;
 
 }
+
 
 #responsive .col_left {
     display: inline-block;
@@ -266,11 +268,67 @@ ul {
     padding: 1rem 2rem;
 }
 
-@media only screen and (min-width:1004px) {
 
+/****** OM MIG *****/
+
+#cv .splash_logo {
+    display: block;
+    text-align: center;
+}
+
+#splash_logo {
+    width: 20vw;
+}
+
+#cv .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
 
 }
 
+#cv .col_left {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 2rem;
+
+}
+
+#cv .col_right {
+    flex-basis: 200px;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+@media only screen and (min-width:800px) {
+
+    .logo {
+        position: absolute;
+        width: 32vw;
+        height: 38vw;
+        background-size: 100%;
+        margin-top: 2vw;
+
+    }
+
+    #slide-1,
+    #slide-2,
+    #slide-3,
+    #slide-4 {
+        top: 0;
+        width: 100%;
+        height: 56.25vw;
+        background-position: 90% 10%;
+    }
+
+    .nav_center {
+        justify-content: center;
+        width: 10vw;
+    }
+
+    .menuknap {
+        width: 6vw;
+    }
 
 
-
+}
