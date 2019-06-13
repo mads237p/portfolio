@@ -6,18 +6,20 @@ function sidenVises() {
 
     //document.querySelector("#start").classList.add("start_ani");
 
-    //    document.querySelector("#pil_right").addEventListener("click", slide);
+
+    document.querySelector(".pil_right").addEventListener("click", slide);
+    document.querySelector(".pil_left").addEventListener("click", slide);
 
     document.querySelector(".menuknap").addEventListener("click", toggleMenu);
 
 }
 
-//function slide() {
-//    console.log("slide");
-//
-//    //    document.querySelector("#forside").classList.add("slide");
-//
-//}
+function slide() {
+    console.log("slide");
+
+    document.querySelector("#forside").classList.add("page_slide_right");
+
+}
 
 function toggleMenu() {
     console.log("toggleMenu");
@@ -30,6 +32,6 @@ function toggleMenu() {
     } else {
         document.getElementsByClassName("menuknap").src = "assets/No.svg";
         document.getElementsByClassName("cv").classlist = "hidden";
-        document.getElementsByClassName("forside").classlist = "hidden";
+        //        document.getElementsByClassName("forside").classlist = "hidden";
     }
 }
