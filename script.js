@@ -3,10 +3,12 @@ window.addEventListener("load", sidenVises);
 
 
 var elmnt1 = document.getElementById("slide-1");
-var elmnt2 = document.getElementById("slide-2");
-var elmnt3 = document.getElementById("slide-3");
-var elmnt4 = document.getElementById("slide-4");
-var page;
+var elmnt2 = document.getElementById("res");
+var elmnt3 = document.getElementById("animation");
+var elmnt4 = document.getElementById("redesign");
+var elmnt5 = document.getElementById("experience");
+var rightPil = document.querySelector("#pil1");
+var leftPil = document.querySelector(".pil_left");
 
 document.querySelector("#start").classList.add("startAni");
 document.querySelector("#forside").classList.add("fadeIn");
@@ -24,18 +26,24 @@ function sidenVises() {
         startSide();
     }
 
-
-
 }
 
 
 function startSide() {
     console.log("startSide");
 
-
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
-    document.querySelector(".logo1").addEventListener("click", fadeOut);
+    rightPil.addEventListener("click", scrollTo);
+
+    elmnt2.addEventListener("click", resFadeOut);
+
+    elmnt3.addEventListener("click", aniFadeOut);
+
+    elmnt4.addEventListener("click", reDesignFadeOut);
+
+    elmnt5.addEventListener("click", uxFadeOut);
+
 
 }
 
@@ -43,11 +51,7 @@ function startSide() {
 function scrollTo() {
     console.log("scroll");
 
-    document.querySelector(".pil_right").removeEventListener("click", scrollTo);
-    document.querySelector(".pil_left").removeEventListener("click", scrollTo);
-
-    document.getElementsById("front").classList.add("page_slide_right");
-
+    location.href = "#slide-2";
 }
 
 function toggleMenu() {
@@ -65,17 +69,68 @@ function toggleMenu() {
     }
 }
 
-function fadeOut() {
+function resFadeOut() {
     console.log("fadeOut");
 
-    document.querySelector("#slide-3").classList.add("fadeOut");
+    document.querySelector("#slide-2").classList.add("fadeOut");
 
-    document.querySelector("#slide-3").addEventListener("animationend", openSite);
+    document.querySelector("#slide-2").addEventListener("animationend", responsiveSite);
+
 
 }
 
-function openSite() {
-    console.log("openSite");
+function aniFadeOut() {
+    console.log("aniFadeOut");
 
-    location.href = "#slide-5";
+    document.querySelector("#slide-3").classList.add("fadeOut");
+
+    document.querySelector("#slide-3").addEventListener("animationend", animationsSite);
+
+}
+
+function reDesignFadeOut() {
+    console.log("fadeOut");
+
+    document.querySelector("#slide-4").classList.add("fadeOut");
+
+    document.querySelector("#slide-4").addEventListener("animationend", reDesignSite);
+
+
+}
+
+function uxFadeOut() {
+    console.log("fadeOut");
+
+    document.querySelector("#slide-5").classList.add("fadeOut");
+
+    document.querySelector("#slide-5").addEventListener("animationend", uxSite);
+
+}
+
+function animationsSite() {
+    console.log("animationsSite");
+
+    location.href = "animation.html";
+
+}
+
+function responsiveSite() {
+    console.log("responsiveSite");
+
+    location.href = "responsive.html";
+
+}
+
+function reDesignSite() {
+    console.log("reDesignSite");
+
+    location.href = "redesign.html";
+
+}
+
+function uxSite() {
+    console.log("ux");
+
+    location.href = "ux.html";
+
 }

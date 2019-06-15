@@ -20,7 +20,6 @@ body {
 
 }
 
-
 h1 {
     font-family: 'sofia-pro', sans-serif;
     font-weight: 600;
@@ -32,7 +31,7 @@ h2 {
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: capitalize;
-    margin-bottom: 0;
+    margin: 0;
     padding: 0;
     text-align: center;
 }
@@ -44,8 +43,8 @@ h5 {
     text-transform: uppercase;
     margin: 0;
 
-
 }
+
 
 p {
     font-family: 'gill-sans-nova', sans-serif;
@@ -54,10 +53,19 @@ p {
 }
 
 ul {
+    font-family: 'sofia-pro', sans-serif;
+    font-size: 1rem;
     display: inline-block;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    text-transform: capitalize;
+
+}
+
+
+li {
+    padding: 2vw 0 1vw 0;
 }
 
 a {
@@ -76,14 +84,6 @@ img {
 
 }
 
-.billede {
-    border-radius: 100px;
-}
-
-
-
-
-
 
 /**** HEADER ****/
 
@@ -101,7 +101,6 @@ header {
 .hide {
     display: none;
 }
-
 
 .hidden {
     display: none;
@@ -128,7 +127,7 @@ header {
 }
 
 #menu h5 {
-    margin-top: 6vw;
+    margin-top: 1vw;
     padding: 4vw;
     border-bottom: 1px solid #1a1734;
 
@@ -137,7 +136,7 @@ header {
 #menuknap {
     position: fixed;
     top: 3vw;
-    left: 93vw;
+    left: 85vw;
     width: 8vw;
     margin: 1vw;
     z-index: 1000;
@@ -148,32 +147,31 @@ header {
     transform: scale(1.1);
 }
 
-
-.pil_right {
-    position: fixed;
-    left: 90vw;
-    background-size: 100%;
-    width: 5vw;
-    height: 9.5vw;
-    top: 60vw;
-    z-index: 1000;
+#pil1 {
+    position: absolute;
+    left: 85vw;
 }
 
 .pil_left {
-    position: fixed;
-    left: 5vw;
-    top: 60vw;
+    position: relative;
     background-size: 100%;
     width: 5vw;
+    right: 10vw;
+    height: 9.5vw;
+    z-index: 1000;
+    margin: 4vw;
+}
+
+.pil_right {
+    position: relative;
+    background-size: 100%;
+    width: 5vw;
+    left: 10vw;
     height: 9.5vw;
     z-index: 1000;
 }
 
-
-
-
-/****************************** FORSIDE ****************************/
-
+/****************************** FORSIDE ***************************/
 
 
 .slider {
@@ -183,9 +181,7 @@ header {
     /*    width: 100%;*/
     display: flex;
 
-    /*    overflow-y: hidden;*/
 }
-
 
 .slide {
     top: 0;
@@ -280,23 +276,6 @@ header {
 }
 
 
-/*
-
-#link2,
-#link3,
-#link3,
-#link4,
-#link5 {
-    text-align: center;
-    position: absolute;
-    width: 56vw;
-    height: 58vw;
-    background-size: 100%;
-    margin-top: 10rem;
-    pointer-events: none;
-}
-*/
-
 #res:hover,
 #animation:hover,
 #redesign:hover,
@@ -306,7 +285,6 @@ header {
     animation-fill-mode: both;
 
 }
-
 
 #slide-1:hover,
 #slide-2:hover,
@@ -326,54 +304,51 @@ header {
 #responsive .splash_logo {
     display: block;
     text-align: center;
-
+    margin: 5vw;
 
 }
 
-/*
 
 #splash_logo {
+    width: 60vw;
 
 }
-*/
 
 #responsive .arrow_logo {
     /*    display: block;*/
     text-align: center;
 
-
 }
 
 .arrow {
-    width: 10vw;
-    margin: 4vw;
+    width: 17vw;
+    margin-bottom: 8vw;
 }
 
 #responsive .wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10vw 5rem;
+    margin: 30vw 1rem;
+    padding: 10vw 5vw;
+    border-top: 2px solid #000;
 }
+
 
 
 #responsive .col_left {
     display: inline-block;
     flex-basis: 200px;
-    flex-grow: 1;
+    flex-grow: 2;
     padding: 0rem 0rem;
 }
 
 #responsive .col_right {
     flex-basis: 300px;
     flex-grow: 1;
-    padding: 1rem 0rem;
+    padding: 0;
+    margin: 0 2rem;
 }
-
-
-
-
-
 
 
 /*************************** OM MIG *********************/
@@ -381,10 +356,12 @@ header {
 #cv .splash_logo {
     display: block;
     text-align: center;
+    margin: 1vw;
 }
 
-#splash_logo {
-    width: 20vw;
+#cv #splash_logo {
+    width: 10vw;
+
 }
 
 #cv .wrapper {
@@ -486,7 +463,7 @@ header {
 
 .fadeOut {
     animation-name: fadeOut_kf;
-    animation-duration: 2s;
+    animation-duration: 1.3s;
     animation-fill-mode: both;
     animation-iteration-count: 1;
 }
@@ -566,9 +543,7 @@ header {
         background-position: 10% 90%;
     }
 
-    #splash #animation {
-        filter: invert(2);
-    }
+
 
     .nav_center {
         justify-content: center;
@@ -577,7 +552,9 @@ header {
 
     #menuknap {
         margin: 0;
-        width: 4vw;
+        width: 3vw;
+        left: 95vw;
+        transition: 2s;
     }
 
     #menu {
@@ -585,7 +562,7 @@ header {
         flex-wrap: wrap;
         margin: 0;
         width: 33%;
-        padding: 4vw 9vw 0 4vw;
+        padding: 4vw 7vw 0 1vw;
 
     }
 
@@ -600,8 +577,22 @@ header {
     /********    UNDERSIDER *******/
 
     #responsive .col_right {
-        padding: 5vw;
+        /*        padding: 5vw;*/
+    }
+
+    #splash #animation {
+        filter: invert(2);
+    }
+
+    #splash_logo {
+        margin-top: -5vw;
+        width: 20vw;
+
     }
 
 
-}
+    .arrow {
+        width: 7vw;
+
+
+    }
