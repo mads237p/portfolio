@@ -16,19 +16,14 @@ function sidenVises() {
 
     let frontPage = document.getElementById("start");
 
-    if(frontPage == true) {
+    if (frontPage == true) {
 
         document.querySelector("#start").classList.add("startAni");
 
-        } else {
-            startSide();
-        }
+    } else {
+        startSide();
+    }
 
-
-//document.querySelector("#start").classList.add("startAni");
-//
-//
-//  document.querySelector("#start").addEventListener("animationend", startSide);
 
 
 }
@@ -38,10 +33,9 @@ function startSide() {
     console.log("startSide");
 
 
-       document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
-//      document.querySelector(".pil_right").addEventListener("click", scrollTo);
-//    document.querySelector(".pil_left").addEventListener("click", scrollTo);
+    document.querySelector(".logo1").addEventListener("click", fadeOut);
 
 }
 
@@ -49,7 +43,7 @@ function startSide() {
 function scrollTo() {
     console.log("scroll");
 
-     document.querySelector(".pil_right").removeEventListener("click", scrollTo);
+    document.querySelector(".pil_right").removeEventListener("click", scrollTo);
     document.querySelector(".pil_left").removeEventListener("click", scrollTo);
 
     document.getElementsById("front").classList.add("page_slide_right");
@@ -63,4 +57,25 @@ function toggleMenu() {
 
     let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
+    if (erSkjult == true) {
+        document.getElementById("menuknap").src = "assets/LOGOS/menu_dots.png";
+    } else {
+        document.getElementById("menuknap").src = "assets/No.svg";
+
+    }
+}
+
+function fadeOut() {
+    console.log("fadeOut");
+
+    document.querySelector("#slide-3").classList.add("fadeOut");
+
+    document.querySelector("#slide-3").addEventListener("animationend", openSite);
+
+}
+
+function openSite() {
+    console.log("openSite");
+
+    location.href = "#slide-5";
 }

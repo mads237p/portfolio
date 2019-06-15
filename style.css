@@ -98,6 +98,10 @@ header {
     width: 10vw;
 }
 
+.hide {
+    display: none;
+}
+
 
 .hidden {
     display: none;
@@ -133,7 +137,7 @@ header {
 #menuknap {
     position: fixed;
     top: 3vw;
-    left: 90vw;
+    left: 93vw;
     width: 8vw;
     margin: 1vw;
     z-index: 1000;
@@ -167,13 +171,6 @@ header {
 
 
 
-
-
-
-
-
-
-/*****ANIMATIONS END ******/
 
 /****************************** FORSIDE ****************************/
 
@@ -326,17 +323,24 @@ header {
 
 
 /******************** UNDERSIDE INDSTILLINGER *********************/
-
-
 #responsive .splash_logo {
     display: block;
     text-align: center;
 
+
 }
+
+/*
+
+#splash_logo {
+
+}
+*/
 
 #responsive .arrow_logo {
     /*    display: block;*/
     text-align: center;
+
 
 }
 
@@ -464,7 +468,7 @@ header {
 
 .fadeIn {
     animation-name: fadeIn;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
 }
@@ -477,6 +481,27 @@ header {
 
     100% {
         opacity: 1;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut_kf;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeOut_kf {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -551,16 +576,16 @@ header {
     }
 
     #menuknap {
-        width: 6vw;
+        margin: 0;
+        width: 4vw;
     }
 
     #menu {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row-reverse;
         margin: 0;
-        width: 30%;
-        padding: 4vw 4vw 0 4vw;
+        width: 33%;
+        padding: 4vw 9vw 0 4vw;
 
     }
 
