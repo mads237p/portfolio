@@ -1,7 +1,6 @@
 window.addEventListener("load", sidenVises);
 
 
-
 var elmnt1 = document.getElementById("slide-1");
 var elmnt2 = document.getElementById("res");
 var elmnt3 = document.getElementById("animation");
@@ -16,6 +15,7 @@ document.querySelector("#forside").classList.add("fadeIn");
 function sidenVises() {
     console.log("sidenVises");
 
+
     let frontPage = document.getElementById("start");
 
     if (frontPage == true) {
@@ -25,6 +25,8 @@ function sidenVises() {
     } else {
         startSide();
     }
+
+
 
 }
 
@@ -134,3 +136,5 @@ function uxSite() {
     location.href = "ux.html";
 
 }
+
+

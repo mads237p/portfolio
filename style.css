@@ -1,6 +1,16 @@
 /***** GENERELLE INDSTILLINGER ******/
 :root {
     --main-bg-color: #F2F1EF;
+
+    --main-tekst:
+        'gill-sans-nova';
+        font-weight: 200;
+    line-height: 1.8;
+    font-size: 1.8rem;
+
+    --main-head:
+       'sofia-pro';
+
 }
 
 
@@ -20,26 +30,54 @@ body {
 
 }
 
+footer {
+    text-align: center;
+    font-family: var(--main-head);
+    text-transform: capitalize;
+    background-color: white;
+    padding: 0.2rem;
+    margin-top: 2vw;
+}
+
 h1 {
     font-family: 'sofia-pro', sans-serif;
-    font-weight: 600;
-    font-size: 3rem;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 4vw;
+    margin-top: 30vw;
+
 }
 
 h2 {
-    font-family: 'sofia-pro', sans-serif;
+font-family: var(--main-head);
     font-weight: 600;
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    margin: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
     padding: 0;
+
     text-align: center;
 }
 
+h3 {
+    text-transform: capitalize;
+    font-family: var(--main-head);
+    font-weight: 200;
+    margin: 0;
+
+}
+
+h4 {
+    text-transform: capitalize;
+    font-family: var(--main-head);
+    margin-top: 0;
+        font-size: 0.5rem;
+}
+
 h5 {
-    font-family: 'sofia-pro', sans-serif;
+    font-family: var(--main-head);
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     margin: 0;
 
@@ -47,28 +85,29 @@ h5 {
 
 
 p {
-    font-family: 'gill-sans-nova', sans-serif;
+    font-family: var(--main-tekst);
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
 }
 
 ul {
-    font-family: 'sofia-pro', sans-serif;
-    font-size: 1rem;
-    display: inline-block;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+   font-family: var(--main-tekst);
+    font-size: 0.8rem;
     text-transform: capitalize;
 
 }
 
 
 li {
-    padding: 2vw 0 1vw 0;
+    font-family: var(--main-tekst);
+    font-size: 0.6rem;
+    padding: 0;
+    list-style-type: square;
+    text-transform: capitalize;
 }
 
 a {
+    font-family: var(--main-tekst);
     text-decoration: none;
 }
 
@@ -76,11 +115,36 @@ a:hover {
     color: red;
 }
 
+a:visited {
+    color: blue;
+}
+
+figure {
+    font-family: var(--main-tekst);
+    padding: 0;
+    margin-top:0;
+  margin-bottom:0;
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+figcaption {
+margin: 0;
+    padding: 0;
+    font-family: 'gill-sans-nova', sans-serif;
+    font-style: italic;
+    font-size: 0.5rem;
+}
+
+
+
 
 /**** billed indstillinger ******/
 
 img {
     width: 100%;
+
 
 }
 
@@ -117,9 +181,8 @@ header {
     bottom: 0;
     margin: 0;
     width: 50%;
-    padding: 15vw 5vw 0 0vw;
+    padding: 15vw 5vw 0 0;
     background-color: #F2F1EF;
-    font-size: 1.2rem;
     z-index: 20;
     transition: 1s;
     opacity: 0.95;
@@ -128,7 +191,7 @@ header {
 
 #menu h5 {
     margin-top: 1vw;
-    padding: 4vw;
+    padding: 0 4vw;
     border-bottom: 1px solid #1a1734;
 
 }
@@ -158,7 +221,7 @@ header {
     width: 5vw;
     right: 10vw;
     height: 9.5vw;
-    z-index: 1000;
+    z-index: 2000;
     margin: 4vw;
 }
 
@@ -200,7 +263,7 @@ header {
 }
 
 #slide-1 {
-    background-image: url(assets/P1033146.jpg);
+    background-image: url(assets/P1033146.png);
     width: 100%;
     height: 178vw;
     margin: 0;
@@ -210,7 +273,7 @@ header {
 #slide-2 {
     top: 0;
     background-size: cover;
-    background-image: url(assets/Silo.jpg);
+    background-image: url(assets/Silo.png);
     width: 100%;
     height: 178vw;
     background-position: 25% 0%;
@@ -222,10 +285,14 @@ header {
     filter: invert(2);
 }
 
+#splash #experience {
+    filter: invert(2);
+}
+
 #slide-3 {
     top: 0;
     background-size: cover;
-    background-image: url(assets/Frederikskirken.JPG);
+    background-image: url(assets/Frederikskirken.png);
     width: 100%;
     height: 178vw;
     background-position: 50% 0%;
@@ -235,7 +302,7 @@ header {
 #slide-4 {
     top: 0;
     background-size: cover;
-    background-image: url(assets/body.JPG);
+    background-image: url(assets/body.png);
     width: 100%;
     height: 178vw;
     background-position: 85% 0%;
@@ -245,10 +312,10 @@ header {
 #slide-5 {
     top: 0;
     background-size: cover;
-    background-image: url(assets/P1033146.jpg);
+    background-image: url(assets/BGs/portfolio__2.png);
     width: 100%;
     height: 178vw;
-    background-position: 85% 0%;
+    background-position: 10% 0%;
     margin: 0;
 }
 
@@ -257,6 +324,9 @@ header {
     width: 52vw;
     height: 58vw;
     background-size: 100%;
+    cursor: pointer;
+
+
     /*    margin-top: 8rem;*/
 
 }
@@ -265,6 +335,7 @@ header {
     width: 55vw;
     height: 59vw;
     background-size: 100%;
+    cursor: pointer;
     /*    margin-top: 50vw;*/
 }
 
@@ -272,6 +343,7 @@ header {
     width: 57vw;
     height: 56vw;
     background-size: 100%;
+    cursor: pointer;
     /*    margin-top: 50vw;*/
 }
 
@@ -304,7 +376,7 @@ header {
 #responsive .splash_logo {
     display: block;
     text-align: center;
-    margin: 5vw;
+    margin-top: 40vw;
 
 }
 
@@ -322,33 +394,125 @@ header {
 
 .arrow {
     width: 17vw;
-    margin-bottom: 8vw;
+    margin-bottom: 40vw;
 }
 
 #responsive .wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 30vw 1rem;
-    padding: 10vw 5vw;
-    border-top: 2px solid #000;
+    margin: 10vw 1vw;
+    border: 1px solid rgba(0, 0, 0, 0.51);
+  z-index: 10000;
+
+
 }
 
+#baggrund {
+ display: none;
+}
+
+
+#responsive .col_top {
+    flex-basis: 500px;
+    display: block;
+    padding: 4vw;
+
+}
+
+#responsive .top {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    margin: 3vw 0 0 0;
+}
+
+#responsive .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1rem;
+    margin-top: 2vw;
+
+}
+
+#responsive .bottom .txt {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0 0vw;
+/*    text-align: center;*/
+
+
+}
+
+#responsive .bottom .pics {
+    flex-basis: 100px;
+    flex-grow: 1;
+    margin: 0;
+    padding: 3vw 3vw 0 3vw;
+    border-width: 2px 2px 2px 2px;
+    text-align: center;
+
+
+}
+
+#responsive .billed {
+    width: 5vw;
+
+}
 
 
 #responsive .col_left {
-    display: inline-block;
-    flex-basis: 200px;
+    flex-basis: 400px;
     flex-grow: 2;
-    padding: 0rem 0rem;
+    padding: 0 1rem;
+    margin: 0rem 0rem;
+
+
+
 }
 
-#responsive .col_right {
-    flex-basis: 300px;
+
+
+#responsive .bottom .col_right {
+
+    flex-basis: 400px;
     flex-grow: 1;
-    padding: 0;
-    margin: 0 2rem;
+
 }
+
+
+
+#responsive .col_right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 200px;
+    flex-grow: 1;
+    padding: 0 1rem;
+    margin-bottom: 2vw;
+
+
+}
+
+#redesign .txt {
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 400px;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+.bottom embed {
+    outline: none;
+    border: none;
+    margin: 0;
+    z-index: 0;
+
+}
+
+
+
 
 
 /*************************** OM MIG *********************/
@@ -360,7 +524,7 @@ header {
 }
 
 #cv #splash_logo {
-    width: 10vw;
+    width: 50vw;
 
 }
 
@@ -372,21 +536,26 @@ header {
 }
 
 #cv .col_left {
-    flex-basis: 200px;
+    flex-basis: 300px;
     flex-grow: 1;
-    margin: 2rem;
-
 }
 
 #cv .col_right {
-    flex-basis: 200px;
+    flex-basis: 300px;
     flex-grow: 1;
-    padding: 2rem;
+}
+
+#cv ul {
+    font-size: 0.6rem;
+}
+
+#cv li {
+    font-weight: 200;
+    font-size: 0.8rem;
 }
 
 
 /***********************    ANIMATIONS    *******************************/
-
 
 
 
@@ -424,23 +593,6 @@ header {
     }
 }
 
-
-
-.page_slide_left {
-    animation-name: page_slide_left;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
-}
-
-@keyframes page_slide_left {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100vw);
-    }
-}
 
 
 .fadeIn {
@@ -527,6 +679,14 @@ header {
         background-size: 100%;
     }
 
+    #responsive .splash_logo {
+    display: block;
+    text-align: center;
+    margin: 5vw;
+
+}
+
+
 
     #slide-1,
     #slide-2,
@@ -555,6 +715,7 @@ header {
         width: 3vw;
         left: 95vw;
         transition: 2s;
+        z-index: 1000;
     }
 
     #menu {
@@ -576,8 +737,17 @@ header {
 
     /********    UNDERSIDER *******/
 
-    #responsive .col_right {
-        /*        padding: 5vw;*/
+    h1 {
+        font-size: 2rem;
+        margin-top: 10vw;
+    }
+
+    #responsive .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0vw 5vw;
+        border: none;
     }
 
     #splash #animation {
@@ -591,8 +761,132 @@ header {
     }
 
 
+    #responsive .col_left {
+    flex-basis: 200px;
+    flex-grow: 2;
+    padding: 0rem 1rem;
+    margin: 0rem 0rem;
+
+
+}
+
+
+
+    #responsive .top  {
+        flex-direction: row-reverse;
+    }
+
+      #responsive .bottom {
+          flex-direction: row;
+          flex-basis: 1000px;
+
+    }
+    #responsive .bottom .txt {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0;
+        padding: 1vw;
+
+
+    }
+
+
+    #baggrund {
+        display: block;
+    position: absolute;
+    z-index: -10;
+    width: 50vw;
+    opacity: 0.04;
+    overflow: hidden;
+}
+    ul {
+        text-transform: capitalize;
+        justify-content: center;
+        padding: 0vw 2vw;
+    }
+
+    li {
+        font-size: 0.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
     .arrow {
+             margin-bottom: 10vw;
         width: 7vw;
 
 
     }
+
+
+/****** CV    ********/
+
+    #cv .wrapper{
+        justify-content: center;
+        margin: 1vw;
+    }
+
+   #cv .col_left {
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+ #cv .col_right {
+    flex-basis: 300px;
+    flex-grow: 2;
+    padding: 1rem;
+     border-left: 1px solid #fefaf3;;
+
+}
+
+    #cv #splash_logo {
+    width: 20vw;
+
+}
+
+
+    #cv img {
+        width: 20vw;
+    }
+
+    #cv .billede2 {
+        background-image: url(assets/malik.jpg);
+        background-size: cover;
+        position: absolute;
+        width: 20vw;
+        height: 20vw;
+        top: 27.5vw;
+        left: 12vw;
+
+    }
+
+    #cv .billede {
+        z-index: 1000;
+    }
+
+    #cv .txt {
+        text-align: left;
+        padding: 2vw;
+    }
+
+       #cv ul {
+
+        text-transform: capitalize;
+        justify-content: center;
+        padding: 0vw 2vw;
+           font-size: 0.6rem;
+    }
+
+
+    #cv li {
+    list-style-type: none;
+        font-size: 0.7rem;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
