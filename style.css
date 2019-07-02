@@ -4,12 +4,12 @@
 
     --main-tekst:
         'gill-sans-nova';
-        font-weight: 200;
+    font-weight: 200;
     line-height: 1.8;
     font-size: 1.8rem;
 
     --main-head:
-       'sofia-pro';
+        'sofia-pro';
 
 }
 
@@ -38,6 +38,7 @@ footer {
     background-color: white;
     padding: 0.2rem;
     margin-top: 2vw;
+    bottom: 0;
 }
 
 h1 {
@@ -51,7 +52,7 @@ h1 {
 }
 
 h2 {
-font-family: var(--main-head);
+    font-family: var(--main-head);
     font-weight: 600;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -72,15 +73,16 @@ h4 {
     text-transform: capitalize;
     font-family: var(--main-head);
     margin-top: 0;
-        font-size: 0.5rem;
+    font-size: 0.5rem;
 }
 
 h5 {
     font-family: var(--main-head);
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     margin: 0;
+    padding: 0;
 
 }
 
@@ -92,7 +94,7 @@ p {
 }
 
 ul {
-   font-family: var(--main-tekst);
+    font-family: var(--main-tekst);
     font-size: 0.8rem;
     text-transform: capitalize;
 
@@ -110,28 +112,27 @@ li {
 a {
     font-family: var(--main-tekst);
     text-decoration: none;
+    color: blue;
 }
 
 a:hover {
     color: red;
-}
-
-a:visited {
-    color: blue;
+    transform: scale(1.08);
+    transition: 2s;
 }
 
 figure {
     font-family: var(--main-tekst);
     padding: 0;
-    margin-top:0;
-  margin-bottom:0;
-  margin-left: 0;
-  margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
 
 }
 
 figcaption {
-margin: 0;
+    margin: 0;
     padding: 0;
     font-family: 'gill-sans-nova', sans-serif;
     font-style: italic;
@@ -145,7 +146,6 @@ margin: 0;
 
 img {
     width: 100%;
-
 
 }
 
@@ -177,12 +177,13 @@ header {
     display: flex;
     flex-wrap: wrap;
     position: fixed;
+    justify-content: center;
     right: 0;
     top: 0;
     bottom: 0;
     margin: 0;
-    width: 50%;
-    padding: 15vw 5vw 0 0;
+    width: 100%;
+    padding: 15vw 30vw 3vw 30vw;
     background-color: #F2F1EF;
     z-index: 20;
     transition: 1s;
@@ -191,17 +192,19 @@ header {
 }
 
 #menu h5 {
-    margin-top: 1vw;
-    padding: 0 4vw;
     border-bottom: 1px solid #1a1734;
 
+}
+
+#menu h5:hover {
+    color: #1a1734;
 }
 
 #menuknap {
     position: fixed;
     top: 3vw;
-    left: 85vw;
-    width: 8vw;
+    left: 80vw;
+    width: 10vw;
     margin: 1vw;
     z-index: 1000;
     transition: 1s;
@@ -238,11 +241,21 @@ header {
 /****************************** FORSIDE ***************************/
 
 
+#forside #splash {
+    /*    width: 100%;*/
+    height: 56.4vh;
+    margin-bottom: -100vw;
+    display: flex;
+}
+
 .slider {
     top: 0;
+    flex-grow: 1;
+    flex-basis: 200px;
     bottom: 0;
     background-size: cover;
-    /*    width: 100%;*/
+    width: 100%;
+    height: 100%;
     display: flex;
 
 }
@@ -273,6 +286,7 @@ header {
 
 #slide-2 {
     top: 0;
+    background-attachment: fixed;
     background-size: cover;
     background-image: url(assets/Silo.png);
     width: 100%;
@@ -292,6 +306,7 @@ header {
 
 #slide-3 {
     top: 0;
+    /*    background-attachment: fixed;*/
     background-size: cover;
     background-image: url(assets/Frederikskirken.png);
     width: 100%;
@@ -302,6 +317,7 @@ header {
 
 #slide-4 {
     top: 0;
+    background-attachment: fixed;
     background-size: cover;
     background-image: url(assets/body.png);
     width: 100%;
@@ -311,6 +327,7 @@ header {
 }
 
 #slide-5 {
+
     top: 0;
     background-size: cover;
     background-image: url(assets/BGs/portfolio__2.png);
@@ -359,6 +376,7 @@ header {
 
 }
 
+
 #slide-1:hover,
 #slide-2:hover,
 #slide-3:hover,
@@ -381,6 +399,32 @@ header {
 
 }
 
+.bg1 {
+    background-image: url(ANIMATION/TITELSK%C3%86RM.svg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 56.4vw;
+    background-position: 25% 0%;
+    margin: 0;
+
+}
+
+.bg2 {
+    background-image: url(REDESIGN/redesign.png);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 56.4vw;
+    background-position: 25% 0%;
+    margin: 0;
+
+}
+
+
+
+
+
 
 #splash_logo {
     width: 60vw;
@@ -396,6 +440,7 @@ header {
 .arrow {
     width: 17vw;
     margin-bottom: 40vw;
+
 }
 
 #responsive .wrapper {
@@ -404,13 +449,13 @@ header {
     justify-content: center;
     margin: 10vw 1vw;
     border: 1px solid rgba(0, 0, 0, 0.51);
-  z-index: 10000;
+    z-index: 10000;
 
 
 }
 
 #baggrund {
- display: none;
+    display: none;
 }
 
 
@@ -435,6 +480,7 @@ header {
     padding: 0 1rem;
     margin-top: 2vw;
 
+
 }
 
 #responsive .bottom .txt {
@@ -442,7 +488,7 @@ header {
     flex-grow: 1;
     margin: 0;
     padding: 0 0vw;
-/*    text-align: center;*/
+    /*    text-align: center;*/
 
 
 }
@@ -458,10 +504,12 @@ header {
 
 }
 
+/*
 #responsive .billed {
     width: 5vw;
 
 }
+*/
 
 
 #responsive .col_left {
@@ -475,11 +523,22 @@ header {
 }
 
 
+#responsive .col_right .img {
+    background-image: url(ANIMATION/character.svg);
+    background-position: 50% 10%;
+    margin: 0;
+    width: 50vw;
+    height: 86vw;
+    text-align: center;
+    background-size: cover;
+
+}
 
 #responsive .bottom .col_right {
 
     flex-basis: 400px;
     flex-grow: 1;
+
 
 }
 
@@ -578,6 +637,8 @@ header {
     }
 }
 
+
+
 .page_slide_right {
     animation-name: page_slide_right;
     animation-duration: .5s;
@@ -594,12 +655,18 @@ header {
     }
 }
 
+.slideDown {
+
+    transition: 3s;
+}
+
+
 
 
 .fadeIn {
     animation-name: fadeIn;
     animation-duration: 2s;
-    animation-fill-mode: both;
+    animation-fill-mode: backwards;
     animation-timing-function: ease-in-out;
 }
 
@@ -681,11 +748,11 @@ header {
     }
 
     #responsive .splash_logo {
-    display: block;
-    text-align: center;
-    margin: 5vw;
+        display: block;
+        text-align: center;
+        margin: 5vw;
 
-}
+    }
 
 
 
@@ -714,9 +781,8 @@ header {
     #menuknap {
         margin: 0;
         width: 3vw;
-        left: 95vw;
-        transition: 2s;
-        z-index: 1000;
+        left: 90vw;
+        z-index: 40000;
     }
 
     #menu {
@@ -725,6 +791,7 @@ header {
         margin: 0;
         width: 33%;
         padding: 4vw 7vw 0 1vw;
+        z-index: 30000;
 
     }
 
@@ -733,6 +800,8 @@ header {
         margin-top: 2vw;
         margin-bottom: 0;
         padding-top: 0vw;
+        color: #1a1734;
+        padding: 0 10vw 0 0;
 
     }
 
@@ -756,50 +825,73 @@ header {
     }
 
     #splash_logo {
-        margin-top: -5vw;
-        width: 20vw;
+        margin-top: -15vw;
+        width: 30vw;
+
+    }
+
+    #red #splash_logo,
+    #anima #splash_logo {
+        margin-top: -15vw;
+        width: 23vw;
 
     }
 
 
     #responsive .col_left {
-    flex-basis: 200px;
-    flex-grow: 2;
-    padding: 0rem 1rem;
-    margin: 0rem 0rem;
+        flex-basis: 200px;
+        flex-grow: 2;
+        padding: 0rem 1rem;
+        margin: 0rem 0rem;
 
 
-}
+    }
 
 
 
-    #responsive .top  {
+    #responsive .top {
         flex-direction: row-reverse;
     }
 
-      #responsive .bottom {
-          flex-direction: row;
-          flex-basis: 1000px;
+    #responsive .bottom {
+        flex-direction: row;
+        flex-basis: 1000px;
 
     }
+
     #responsive .bottom .txt {
-    flex-basis: 200px;
-    flex-grow: 1;
-    margin: 0;
+        flex-basis: 200px;
+        flex-grow: 1;
+        margin: 0;
         padding: 1vw;
 
 
     }
 
+    #responsive .col_right .img,
+    #responsive .col_right .img2 {
+        background-image: url(ANIMATION/character.svg);
+        background-attachment: fixed;
+        background-position: 6% 10%;
+        margin: 0;
+        justify-content: center;
+        width: 15vw;
+        height: 36vw;
+        background-size: contain;
+        position: relative;
+        top: 30px;
+    }
+
 
     #baggrund {
         display: block;
-    position: absolute;
-    z-index: -10;
-    width: 50vw;
-    opacity: 0.04;
-    overflow: hidden;
-}
+        position: absolute;
+        z-index: -10;
+        width: 50vw;
+        opacity: 0.04;
+        overflow: hidden;
+    }
+
     ul {
         text-transform: capitalize;
         justify-content: center;
@@ -813,39 +905,40 @@ header {
     }
 
     .arrow {
-             margin-bottom: 10vw;
+        margin-bottom: 10vw;
         width: 7vw;
 
 
     }
 
 
-/****** CV    ********/
+    /****** CV    ********/
 
-    #cv .wrapper{
+    #cv .wrapper {
         justify-content: center;
         margin: 1vw;
     }
 
-   #cv .col_left {
-    flex-basis: 300px;
-    flex-grow: 1;
-    margin-left: 2rem;
-    text-align: center;
-}
+    #cv .col_left {
+        flex-basis: 300px;
+        flex-grow: 1;
+        margin-left: 2rem;
+        text-align: center;
+    }
 
- #cv .col_right {
-    flex-basis: 300px;
-    flex-grow: 2;
-    padding: 1rem;
-     border-left: 1px solid #fefaf3;;
+    #cv .col_right {
+        flex-basis: 300px;
+        flex-grow: 2;
+        padding: 1rem;
+        border-left: 1px solid #fefaf3;
+        ;
 
-}
+    }
 
     #cv #splash_logo {
-    width: 20vw;
+        width: 20vw;
 
-}
+    }
 
 
     #cv img {
@@ -872,17 +965,17 @@ header {
         padding: 2vw;
     }
 
-       #cv ul {
+    #cv ul {
 
         text-transform: capitalize;
         justify-content: center;
         padding: 0vw 2vw;
-           font-size: 0.6rem;
+        font-size: 0.6rem;
     }
 
 
     #cv li {
-    list-style-type: none;
+        list-style-type: none;
         font-size: 0.7rem;
         font-weight: 300;
         padding: 0;
@@ -890,4 +983,3 @@ header {
     }
 
 }
-
