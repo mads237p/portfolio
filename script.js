@@ -34,6 +34,8 @@ function sidenVises() {
 function startSide() {
     console.log("startSide");
 
+    document.querySelector("#splash").classList.add("fadeIn");
+
     rightPil.addEventListener("click", scrollTo);
     document.querySelector("#start").classList.add("startAni");
 
@@ -60,11 +62,11 @@ function contentSite() {
 
 }
 
-function scrollTo() {
-    console.log("scroll");
-
-    location.href = "#slide-2";
-}
+//function scrollTo() {
+//    console.log("scroll");
+//
+//    location.href = "#slide-2";
+//}
 
 function slideDown() {
     console.log("slideDown");
